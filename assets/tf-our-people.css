@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/*
+Theme Name: Divi Child
+Template: Divi
+Author: Child Theme Configurator x
+Version: 1.0.1424751045
+Updated: 2015-02-23 21:10:45
+*/
+
+
+/**********************************************************************************/
+/*************          Our People CSS formatting                      ************/
+/**********************************************************************************/
+
+    /******************************************************************/
+    /*****         CSS PRESENTATION FONTS and COLORS               ****/
+    /******************************************************************/
+
+    div.a_people {      /* div wraps each person separately */
+        font-weight: 400;
+    }
+
+    div.a_people:nth-child(even) {       /* odd sequenced person in the list */
+        /* background-color: #f4f4f4; */
+        
+    }
+    div.a_people:nth-child(odd) {       /*  even sequenced person in the list */
+        /* background-color: #fefefe;    */
+        clear: both;
+    }
+
+    img.a_people_photo {                       /* persons picture formatting */
+        border:#A9D3D1 1px solid;
+        border-radius: 10px;
+        padding: 3px;
+    }
+
+    span.a_people_name {                       /* name for a person */
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    span.a_people_is_staff {        /* is 'Staff' for a person */
+        font-style: italic;
+        /*  display: table; */      /* will put the is 'Staff' on it's own line */
+    }
+    p.a_people_bio {                /* Bio for a person */
+        line-height: initial;
+    }
+
+    /******************************************************************/
+    /*****                    CSS button FORMATTING                ****/
+    /******************************************************************/
+
+    .et_pb_button {
+        margin-top: 0px;      /*  was 12 */
+        padding: 0 1em! important;
+    }
+    .et_pb_button:hover {
+        cursor: pointer
+    }
+
+    /******************************************************************/
+    /*****                    CSS loading spinner                     ****/
+    /******************************************************************/
+
+   #tf_spinner {
+       font-size: 1.5px;
+       text-indent: -999em;
+       overflow: hidden;
+       width: 4em;
+       height: 4em;
+       margin: 10em auto;
+       border-radius: 50%;
+       box-shadow: 0em -8em 0 0em #000000, 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       animation: spin7 2s infinite linear;
+   }
+
+   @keyframes spin7 {
+       12.5% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em #000000, 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       }
+
+       25% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em #000000, 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       }
+
+       37.5% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em #000000, 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       }
+
+       50% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em #000000, -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       }
+
+       62.5% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em #000000, -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       }
+
+       75% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em #000000, -6em -6em 0 0em rgba(0, 0, 0, 0.1);
+       }
+
+       87.5% {
+           box-shadow: 0em -8em 0 0em rgba(0, 0, 0, 0.1), 6em -6em 0 0em rgba(0, 0, 0, 0.1), 8em 0em 0 0em rgba(0, 0, 0, 0.1), 6em 6em 0 0em rgba(0, 0, 0, 0.1), 0em 8em 0 0em rgba(0, 0, 0, 0.1), -6em 6em 0 0em rgba(0, 0, 0, 0.1), -8em 0em 0 0em rgba(0, 0, 0, 0.1), -6em -6em 0 0em #000000;
+       }
+   }
+
+    /******************************************************************/
+    /*****                    CSS page FORMATTING                  ****/
+    /******************************************************************/
+
+
+    div.our_people_list {  /* grouping wraps list of our people together */
+       overflow: auto;
+    }
+
+    div.a_people {      /* div wraps each person separately */
+        border-top: thin dotted #aaa;
+        margin-top: 12px;
+        padding-top: 12px;
+        /* clear: both;                  */ /* gl.2017-03-29 removed */
+        
+        /* gl.2017-03-29 - added to display 2 names to a line */
+        float: left;
+        display: inline-block;
+        /*width: 50%;
+        min-width: 410px;*/
+        padding-right: 12px;
+        max-width: 420px;
+
+        width: 49%;
+        min-width: 49%;
+    }
+
+    div.a_people:last-child {  /* div at last person in the list */
+        margin-bottom: 6px;
+    }
+
+    img.a_people_photo {                                  /* image for a person */
+        float: left;
+        margin-bottom:12px;
+        margin-bottom:2px;
+        margin-right: 12px;
+
+        height: 200px;
+        width:  200px;
+        height: 170px;
+        width:  170px;
+        object-fit: cover;
+        filter: grayscale(.3);			/* grayscale - gradually removes color toward  */
+        -webkit-filter: grayscale(0.3);
+        opacity: 0.85;                  /* opacity   - gradually fades the image as the number increases */
+    }                                                     
+
+div.a_people:nth-child(even) > img.a_people_photo {   /* even nbr person with pict on right */
+    /* gl.2017-03-29 - removed to display 2 names to a line */
+    /*        float: right; */
+    }
+
+/*    @media (min-width: 1026px) {  gl.2017-03-29 added for multi-column - 3 columns screen 
+        div.a_people {
+            width: 33%;
+            min-width: 33%;
+        }
+    }*/
+    /* @media (min-width: 876px) and (max-width: 1025px) {  */ /* gl.2017-03-29 added for 2-columns */
+/*    @media (max-width: 1025px) {  gl.2017-03-29 added for 2-columns 
+        div.a_people {
+            width: 49%;
+            min-width: 49%;
+        }
+    }*/
+    @media (max-width: 684px) { /* gl.2017-03-29 added for multi-column - single column small screen*/
+        div.a_people {
+            width: 100%;
+            min-width: 100%;
+            padding-right: 0px;
+        }
+        div.a_people:nth-child(even) > img.a_people_photo {   /* even nbr person with pict on right */
+            float: right;
+            margin-left: 12px;
+            margin-right: 0px;
+        }
+    }
+    
+
+@media screen and (max-width: 640px) { /* smallest screens - make the pictures smaller*/
+    div.our_people_list {  
+        width: auto;
+        /* margin-left: 8px; */
+        /* margin-right: 12px; */
+    }
+    /* div.a_people { } */ 
+    
+    img.a_people_photo {
+        width: 140px;
+        height: 140px;
+        margin-right: 6px;
+        margin-bottom: 2px;
+    }
+}  
+
+/* EOF */
