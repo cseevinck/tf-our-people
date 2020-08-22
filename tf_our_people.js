@@ -48,6 +48,8 @@ jQuery(document).ready(function () {
                 // document.write(msg);
                 jQuery('#people-list').html(msg);
                 jQuery('#people-list').attr({ "style": "color:red;text-align:center;" });
+                // if error go to gary's php page
+                window.location.replace("https://tf-sandy.org/our-people");
                 fail(); // fail is not a thing - javascript will crash
             },
         });
