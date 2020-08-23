@@ -252,7 +252,6 @@ function tf_op_options_page()
     &lt;div id="our-people-bottom"&gt;&lt;/div&gt;
 </pre>
 Define the options you want for the display of the Our People page display below. <br>Put the "slug" name of the new page in the "Name of Our People page slug" field.
-Define the options you want for the display of the Our People page display below. <br>Put the "slug" name of the old php page in the "Name of Our People php page slug" field. This is because there are times that ajax code fails(??) and it cause the code to revert to the php version. 
  
 </p>
     <form action='options.php' method='post'>
