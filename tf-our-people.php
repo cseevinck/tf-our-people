@@ -40,6 +40,7 @@ function do_tf_our_people()
     $display_num_people_field = $options['display_num_people_field'];
     $phpSlug = $options['display_num_people_field'];
     $display_choice_field = $options['display_choice_field'];
+    $display_php_slug_field = $options['display_php_slug_field'];
 
     // Here for code to build JSON from meta info for users
 
