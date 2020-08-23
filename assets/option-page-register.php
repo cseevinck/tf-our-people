@@ -61,14 +61,6 @@ function tf_op_add_settings_init()
         'tf_our_people_plugin',
         'tf_op_plugin_section'
     );
-
-    add_settings_field(
-        'display_php_slug_field',
-        __('Name of php page for Our People page slug', 'wordpress'),
-        'display_php_slug_render',
-        'tf_our_people_plugin',
-        'tf_op_plugin_section'
-    );
 }
 
 function display_choice_render()
@@ -120,15 +112,6 @@ function display_op_slug_render()
     <?php
 }
 
-function display_php_slug_render()
-{
-    $options = get_option('tf_op_settings');
-    ?>
-    <input type='text' name="tf_op_settings[display_php_slug_field]" 
-    value='<?php echo $options['display_php_slug_field']; ?>'>
-    <?php
-}
-
 /**
  * Returns the default options for Our People.
  *
@@ -139,8 +122,7 @@ function tf_op_get_default_options()
     'display_choice_field' => 3,
     'display_all_field' => 1,
     'display_num_people_field' => 12,
-    'display_op_slug_field' => 'ourpeople',        
-    'display_php_slug_field' => 'php-ourpeople'        
+    'display_op_slug_field' => 'ourpeople'        
     );
 
     return apply_filters('tf_op_default_options', $default_op_options);
@@ -210,20 +192,6 @@ function tf_op_validate( $input )
         $output['display_op_slug_field'] = $tempSlug;
     } else {
         $message = __('Our People page slug must be 2 or more characters long and can only contain alpha & numeric and dash (-) & underscore (_) characters');
-        add_settings_error(
-            'tf_op_settings',
-            esc_attr('invalid_slug'),
-            $message,
-            $type
-        );
-    }
-
-    // Validate the ['display_php_slug_field']
-    $tempSlug = sanitize_title($input['display_php_slug_field']);
-    if (strlen($tempSlug) > 2 ) {
-        $output['display_php_slug_field'] = $tempSlug;
-    } else {
-        $message = __('Our People php page slug must be 2 or more characters long and can only contain alpha & numeric and dash (-) & underscore (_) characters');
         add_settings_error(
             'tf_op_settings',
             esc_attr('invalid_slug'),
