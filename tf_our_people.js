@@ -103,7 +103,7 @@ jQuery(document).ready(function () {
         const displayNumber = Number(jsonData.displayNumber);
         const displayAll = Number(jsonData.displayAll);
         const displayChoice = Number(jsonData.displayChoice);
-        const phpSlug = String(jsonData.phpSlug);
+        const phpSlug = jsonData.phpSlug;
         console.log("phpSlug = ");
         console.log(phpSlug);
 
