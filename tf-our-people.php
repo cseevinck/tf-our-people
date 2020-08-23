@@ -38,6 +38,7 @@ function do_tf_our_people()
 
     $display_all_field = $options['display_all_field']; // if = INCLUDE_ALL then display all
     $display_num_people_field = $options['display_num_people_field'];
+    $phpSlug = $options['display_num_people_field'];
     $display_choice_field = $options['display_choice_field'];
 
     // Here for code to build JSON from meta info for users
@@ -125,6 +126,7 @@ function do_tf_our_people()
     $peopleArray = [
         'displayAll' => $display_all_field,
         'displayNumber' => $display_num_people_field,
+        'phpSlug' => $display_php_slug_field,
         'displayChoice' => $display_choice_field,
         'persons' => array(), // all the people who are not staff or elders
         'elders' => array(),  // all the elders
@@ -271,6 +273,7 @@ function register_tf_op_style()
 {
     $options = get_option('tf_op_settings');
     $slug = $options['display_op_slug_field']; // get name of Our People slug from options
+    $phpslug = $options['display_php_slug_field']; // get name of php Our People slug from options
 
     if (is_page($slug)) {
         wp_enqueue_style('tf-our-people-css', plugin_dir_url(__FILE__).'/assets/tf-our-people.css');
