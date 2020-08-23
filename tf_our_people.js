@@ -104,8 +104,6 @@ jQuery(document).ready(function () {
         const displayAll = Number(jsonData.displayAll);
         const displayChoice = Number(jsonData.displayChoice);
         const phpSlug = String(jsonData.phpSlug);
-        console.log("jsonData = ");
-        console.log(JSON.stringify(jsonData, undefined, 2));
         console.log("phpSlug = ");
         console.log(phpSlug);
 
