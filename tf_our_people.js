@@ -104,7 +104,8 @@ jQuery(document).ready(function () {
         const displayAll = Number(jsonData.displayAll);
         const displayChoice = Number(jsonData.displayChoice);
         const phpSlug = jsonData.phpSlug;
-        console.log("phpSlug = ".phpSlug);
+        console.log("phpSlug = ");
+        console.log(phpSlug);
 
         // shuffle all lists
         let leaders = jsonData.leaders.sort(() => 0.5 - Math.random());
