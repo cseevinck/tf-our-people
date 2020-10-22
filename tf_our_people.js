@@ -25,7 +25,7 @@ jQuery(document).ready(function () {
             url: myAjax.ajaxurl,
             data: { action: "do_tf_our_people", post_id: post_id, nonce: nonce, },
             success: function (response) {
-            // console.log("post_id".post_id);
+                // console.log("post_id".post_id);
                 fillAllPersonsHTML(response);
             },
             error: function (jqXHR, exception) {
@@ -68,7 +68,7 @@ jQuery(document).ready(function () {
 
         const div = document.getElementById('our-people-top'); // put top button here 
         // If not there - error
-        if (!div){
+        if (!div) {
             jQuery('#people-list').html('our-people-top not defined in options');
             jQuery('#people-list').attr({ "style": "color:red;text-align:center;" });
             fail(); // fail is not a thing - javascript will crash
@@ -118,8 +118,11 @@ jQuery(document).ready(function () {
                     if (numToKeep <= 0) {
                         numToKeep = 1; // If settings displayNumber <= number of leaders, force it to 1 
                     }
+                    // add staff to persons list - wo want to display them also
+                    persons = persons.concat(staffs);
+                    persons.sort(() => 0.5 - Math.random());
                     persons = persons.slice(0, numToKeep);
-                    // Combine leaders and persons into one array
+                    // Combine elders and persons into one array
                     finalList = persons.concat(elders);
                     break;
                 case DISPLAY_STAFF:
@@ -128,6 +131,9 @@ jQuery(document).ready(function () {
                     if (numToKeep <= 0) {
                         numToKeep = 1; // If settings displayNumber <= number of leaders, force it to 1 
                     }
+                    // add elders to persons list - wo want to display them also
+                    persons = persons.concat(elders);
+                    persons.sort(() => 0.5 - Math.random());
                     persons = persons.slice(0, numToKeep);
                     // Combine leaders and persons into one array
                     finalList = persons.concat(staffs);
