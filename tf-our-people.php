@@ -6,7 +6,7 @@
  * Description: Our People plugin (tf-our-people) for TF-Sandy.org (Uses Ajax to refresh). When installed, see plugin settings page for instructions.
  * Author: Corky Seevinck.
  * Author URI: https://CHS-Webs.com
- * Version: 1.1.0
+ * Version: 1.2.0 - add elders and staff to list if STAFF & ELDERS are selected
  * Text Domain: chs-webs.com
  * Domain Path: /language.
  */
